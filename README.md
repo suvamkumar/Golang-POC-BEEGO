@@ -1,2 +1,2 @@
-# Golang-POC-BEEGO
+# Golang-Poc-Beego
 Crud-Using-Beego-Mongo
