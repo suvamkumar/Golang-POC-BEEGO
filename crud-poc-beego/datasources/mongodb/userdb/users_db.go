@@ -6,13 +6,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/astaxie/beego"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
-)
-
-const (
-	connectionString = "mongodb://localhost:27017"
 )
 
 var (
@@ -21,7 +18,7 @@ var (
 )
 
 func connect() *mongo.Client {
-	client, err := mongo.NewClient(options.Client().ApplyURI(connectionString))
+	client, err := mongo.NewClient(options.Client().ApplyURI(beego.AppConfig.String("mongoDBConn")))
 	if err != nil {
 		log.Fatal(err)
 		panic(err)
