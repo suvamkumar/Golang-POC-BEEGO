@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"crud_with_beego/Golang-POC-BEEGO/crud-poc-beego/controllers"
+	"crud_with_beego/Golang-POC-BEEGO/crud-poc-beego/modules/users/controllers"
 
 	"github.com/astaxie/beego"
 )
